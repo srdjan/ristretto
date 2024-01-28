@@ -1,4 +1,4 @@
-## this is a doc-2 file
+## Hosting
 
 We are testing
 
