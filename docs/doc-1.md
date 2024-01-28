@@ -1,7 +1,9 @@
 ### Onboarding
 
-We are testing
+This is internal documentation for Application Onboarding.
+Steps to onboard to the platform:
 
-[ ] step 1
-[ ] step 2
+- [ ] step 1
+- [ ] step 2
 
+...

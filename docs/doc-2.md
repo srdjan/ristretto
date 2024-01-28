@@ -1,8 +1,8 @@
 #### Hosting
 
-This is application hosting documentation for Application Onboarding
+This is application hosting documentation for Application Onboarding, steps:
 
-[ ] step 1
-[ ] step 2
+- [ ] step 1
+- [ ] step 2
 
-.
+...
