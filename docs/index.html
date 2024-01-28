@@ -11,18 +11,10 @@
     <!-- <link rel="stylesheet" href="styles.css" /> -->
     <link rel="stylesheet" href="https://unpkg.com/missing.css/dist/missing.min.css" />
     <!-- <link rel="stylesheet" href="https://unpkg.com/mvp.css">  -->
+    <!-- <link rel="stylesheet" href="menu.css" /> -->
+  
   </head>
   <body>
-    <header>
-      <img src="/logo.png" alt="Logo"> <!-- Website logo -->
-      <nav id="menu"> <!-- Menu -->
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/Projects">About</a></li>
-          <li><a href="/About">Contact us</a></li>
-        </ul>
-      </nav>
-    </header>
     <main>
       <h1>Restretto - test bad for embedding docs</h1>
     
@@ -31,8 +23,8 @@
       <p>Hexlet is a ready-made path from absolute beginner to your first job.</p>
     
       <section>
+
         <h2>Overview</h2>
-    
         <ul>
           <li>Lots of theory</li>
           <li>Lots of practice</li>
@@ -44,21 +36,19 @@
         <h2>Projects</h2>
     
         <article>
-          <h3>Project 1</h3>
-          <zero-md src="doc.md"></zero-md>
-          <a href="doc.md">Docs</a>
+          <h3>Onboarding</h3>
+          <zero-md src="doc-1.md">
+            <template><link rel="stylesheet" href="styles.css" /></template>          
+            This is internal documentation for Application Onboarding:  <a href="do1.md">Onboarding</a>
+          </zero-md>
         </article>
     
         <article>
-          <h3>Project 2</h3>
-          <p>News text 2</p>
-          <a href="#">More</a>
-        </article>
-    
-        <article>
-          <h3>Project 3</h3>
-          <p>News text 3</p>
-          <a href="#">More</a>
+          <h3>Hosintg</h3>
+          <zero-md src="doc-1.md">
+            <template><link rel="stylesheet" href="styles.css" /></template>          
+            This is application hosting documentation for Application Onboarding:  <a href="do2.md">Hosting</a>
+          </zero-md>
         </article>
       </section>
     </main>
