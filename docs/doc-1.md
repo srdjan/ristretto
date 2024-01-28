@@ -1,4 +1,4 @@
-### Onboarding
+#### Onboarding
 
 This is internal documentation for Application Onboarding.
 Steps to onboard to the platform:
