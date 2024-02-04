@@ -11,8 +11,9 @@ html {
 body {
   font-family: 'Calibri', 'Verdana', sans-serif;
   color: #333;
-  background: #ffff;
+  background: #fff9ef;
 }
+
 
 /* grid container */
 #wrapper {
@@ -22,19 +23,24 @@ body {
   max-width: 1000px;
   margin: 2rem auto;
 }
+.grid-border {
+  border: 1px rgb(182, 182, 182) dashed;
+  padding: 1rem;
+}
 
 /* four main areas of the page:
-		header - spans 2 columns
-		article - 1 column, left
-		aside - 1 column, right
-		footer - spans 2 columns
-   each has a different background-color
-   -- these could be DIVs instead --
-   */
+  header - spans 2 columns
+  article - 1 column, left
+  aside - 1 column, right
+  footer - spans 2 columns
+ each has a different background-color
+ -- these could be DIVs instead --
+ */
+
 header {
   grid-column: span 2;
   grid-row: 1;
-  background-color: #efefee;
+  background: #ebffeb;
   padding: 1rem 0;
   text-align: center;
 }
@@ -42,7 +48,7 @@ header {
 footer {
   grid-column: span 2;
   grid-row: 3;
-  background-color: #ededec;
+  background: #fffbd7;
   padding: 1rem 2rem;
   text-align: center;
 }
@@ -50,23 +56,20 @@ footer {
 article {
   grid-column: 1;
   grid-row: 2;
-  background-color: #ededec;
+  background: #dfffff;
   padding: 1rem 2rem;
 }
 
 aside {
   grid-column: 2;
   grid-row: 2;
-  background-color: #ededec;
+  background: rgb(255, 245, 255);
   padding: 1rem 2rem;
 }
 
-.grid-border {
-  border: 1px rgb(182, 182, 182) dashed;
-  padding: 1rem;
-}
 
 /* heading and text styles */
+
 h1,
 h2 {
   font-family: 'Cambria', 'Georgia', serif;
@@ -84,7 +87,9 @@ p {
   line-height: 1.4rem;
 }
 
+
 /* links */
+
 a {
   color: #237b93;
   text-decoration: underline;
@@ -95,7 +100,9 @@ a:hover {
   text-decoration: none;
 }
 
+
 /* definition list styles for sidebar */
+
 dl {
   padding: 0;
 }
@@ -112,7 +119,9 @@ dt {
   line-height: 1.5rem;
 }
 
+
 /* media queries */
+
 @media (max-width: 1000px) {
   #wrapper {
     margin: 0;

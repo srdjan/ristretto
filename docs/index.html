@@ -10,7 +10,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
   <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/missing.css/dist/normalize.min.css">
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -19,7 +19,6 @@
       <h1>Using CSS grid for layout</h1>
       <p>This page demonstrates a four-unit layout with header, footer, article and sidebar (aside).</p>
       <p>The HTML here is the same as the bla bla bla page, but the CSS is quite different.</p>
-      <zero-md src="doc-1.md"></zero-md>
     </header>
 
     <article>
@@ -44,6 +43,17 @@
         <p>
           More details about Ravana <a href="#target-content">Open</a>
         </p>
+        <div id="target-content">
+          <a href="#" class="close"></a>
+          <div id="target-inner">
+            <h2>Doc 1</h2>
+            <zero-md src="doc-1.md">
+              <template>
+                <link rel="stylesheet" href="https://raw.githubusercontent.com/jasonm23/markdown-css-themes/gh-pages/markdown7.css" />
+              </template>
+            </zero-md>
+          </div>
+        </div>
       </div>
     </article>
 
@@ -64,88 +74,13 @@
             avatar
             of goddess Lakshmi, the consort of Vishnu. Sita is portrayed as the epitome of female purity and virtue.
           </dd>
-
-          <dt>Hanuman</dt>
-          <dd>A vanara (a monkeylike being) belonging to the kingdom of Kishkindha. In some versions, he is portrayed as
-            the eleventh avatar of god Shiva and an ideal bhakta of Rama. He is born as the son of Kesari, a vanara
-            king,
-            and the goddess Anjana. He plays an important role in locating Sita and in the ensuing battle.</dd>
-
-          <dt>Lakshmana</dt>
-          <dd>A younger brother of Rama, who chose to go into exile with him. He is the son of King Dasaratha and Queen
-            Sumitra, and twin of Shatrughna. Lakshmana is portrayed as an avatar of Shesha, the naga (dragon, serpent)
-            king associated with the god Vishnu. He spends his time protecting Sita and Rama.</dd>
-
-          <dt>Ravana</dt>
-          <dd>A rakshasa, the king of Lanka (current-day Sri Lanka). After performing severe penance for 10,000 years,
-            he
-            received a boon from the creator-god Brahma: he could henceforth not be killed by gods, demons, or spirits.
-            He
-            is portrayed as a powerful demon king who disturbs the penances of rishis (ascetics who practice austerities
-            in the forest). Vishnu incarnates as the human Rama to defeat him, thus circumventing the boon given by
-            Brahma.</dd>
         </dl>
       </div>
     </aside>
 
     <footer>
       <p><a href="index.html">index</a> | <a href="https://github.com/macloo/html_css_templates">GitHub</a><br>
-        Text adapted from Wikipedia entry <a href="http://en.wikipedia.org/wiki/Ramayana">Ramayana</a>.</p>
     </footer>
   </div>
-
-  <div id="target-content">
-    <a href="#" class="close"></a>
-    <div id="target-inner">
-      <h2>Doc 1</h2>
-      <zero-md src="doc-1.md"></zero-md>
-    </div>
-  </div>
-
-
 </body>
-
 </html>
-<!-- <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <link rel="stylesheet" href="https://unpkg.com/missing.css/dist/missing.min.css" />
-  </head>
-  <body>
-    <main>
-      <h1>Ristretto - test bad for embedding markdown docs</h1>
-    
-      <p>We believe that a real programmer must understand how a computer works and think like a computer. They should see a problem, not a task. They must be able to analyze and reason at the level of the problem and above, not just at a code level.</p>
-      <p>Given how many study materials, courses, and books are available, the main question a beginner faces nowadays is not “where do I study?” but “what should I study and in what order?” There are many opinions on this subject. Some advise starting with mathematics, some advise specific languages and technologies.</p>
-      <p>Ristretto is a ready-made path from absolute beginner to your first job.</p>
-    
-      <section>
-        <h3>Overview</h3>
-        <ul>
-          <li>Lots of theory</li>
-          <li>Lots of practice</li>
-          <li>Lots of mentors</li>
-          <li>Lots of mentors</li>
-        </ul>
-      </section>
-
-      <section>
-        <article>
-          <zero-md src="doc-1.md">
-            <template><    
-              <link rel="stylesheet" href="md.css"></script>
-            </template>          
-          </zero-md>
-        </article>
-    
-        <article>
-          <zero-md src="doc-2.md">
-            <template>
-              <link rel="stylesheet" href="md.css"></script>
-            </template>          
-          </zero-md>
-        </article>
-      </section>
-    </main>
-  </body>
-</html> -->
