@@ -24,7 +24,7 @@ body {
   margin: 2rem auto;
 }
 .grid-border {
-  border: 1px rgb(182, 182, 182) dashed;
+  border: 1px rgb(227, 227, 227) dashed;
   padding: 1rem;
 }
 
@@ -49,7 +49,7 @@ footer {
   grid-column: span 2;
   grid-row: 3;
   background: #fffbd7;
-  padding: 1rem 2rem;
+  padding: 0.5rem 0.5rem;
   text-align: center;
 }
 
@@ -57,21 +57,18 @@ article {
   grid-column: 1;
   grid-row: 2;
   background: #dfffff;
-  padding: 1rem 2rem;
+  padding: 0.5rem 0.5rem;
 }
 
 aside {
   grid-column: 2;
   grid-row: 2;
   background: rgb(255, 245, 255);
-  padding: 1rem 2rem;
+  padding: 0.5rem 0.5rem;
 }
 
-
 /* heading and text styles */
-
-h1,
-h2 {
+h1, h2 {
   font-family: 'Cambria', 'Georgia', serif;
   font-size: 3rem;
   font-weight: normal;
@@ -87,9 +84,7 @@ p {
   line-height: 1.4rem;
 }
 
-
 /* links */
-
 a {
   color: #237b93;
   text-decoration: underline;
@@ -100,9 +95,7 @@ a:hover {
   text-decoration: none;
 }
 
-
 /* definition list styles for sidebar */
-
 dl {
   padding: 0;
 }
@@ -119,9 +112,7 @@ dt {
   line-height: 1.5rem;
 }
 
-
 /* media queries */
-
 @media (max-width: 1000px) {
   #wrapper {
     margin: 0;
@@ -136,8 +127,7 @@ dt {
     margin: 0;
   }
 
-  article,
-  aside {
+  article, aside {
     width: 100%;
   }
 }
