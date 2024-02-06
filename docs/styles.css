@@ -8,9 +8,8 @@ html {
 }
 
 body {
-  font-family: 'Cambria', 'Georgia', serif;
-  color: #333;
-  /* background: #fcfbf9; */
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
 }
 
 #grid {
@@ -31,21 +30,18 @@ header {
   grid-row: 1;
   padding: 1rem 0;
   text-align: center;
-  /* background: #ebffeb; */
 }
 
 aside {
   grid-column: 1;
   grid-row: 2;
   padding: 0.5rem 0.5rem;
-  /* background: rgb(255, 245, 255); */
 }
 
 article {
   grid-column: 2;
   grid-row: 2;
   padding: 0.5rem 0.5rem;
-  /* background: #dfffff; */
 }
 
 footer {
@@ -53,7 +49,6 @@ footer {
   grid-row: 3;
   padding: 0.5rem 0.5rem;
   text-align: center;
-  /* background: #f8f6ea; */
 }
 
 h1,
