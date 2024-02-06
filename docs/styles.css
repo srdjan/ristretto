@@ -1,80 +1,61 @@
-/* universal selector used to normalize box-sizing for all browsers */
 html {
   font-size: 100%;
   box-sizing: border-box;
 }
-
 * {
   box-sizing: inherit;
 }
-
 body {
   font-family: 'Calibri', 'Verdana', sans-serif;
   color: #333;
-  background: #fff9ef;
+  /* background: #fcfbf9; */
 }
 
-
-/* grid container */
-#wrapper {
+#grid {
   display: grid;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 30% 70%;
   grid-auto-rows: minmax(100px, auto);
   max-width: 1000px;
-  margin: 2rem auto;
+  margin: 0.5rem auto;
 }
 .grid-border {
   border: 1px rgb(227, 227, 227) dashed;
-  padding: 1rem;
+  padding: 0.3rem;
 }
-
-/* four main areas of the page:
-  header - spans 2 columns
-  article - 1 column, left
-  aside - 1 column, right
-  footer - spans 2 columns
- each has a different background-color
- -- these could be DIVs instead --
- */
 
 header {
   grid-column: span 2;
   grid-row: 1;
-  background: #ebffeb;
   padding: 1rem 0;
   text-align: center;
+  /* background: #ebffeb; */
 }
-
+aside {
+  grid-column: 1;
+  grid-row: 2;
+  padding: 0.5rem 0.5rem;
+  /* background: rgb(255, 245, 255); */
+}
+article {
+  grid-column: 2;
+  grid-row: 2;
+  padding: 0.5rem 0.5rem;
+  /* background: #dfffff; */
+}
 footer {
   grid-column: span 2;
   grid-row: 3;
-  background: #fffbd7;
   padding: 0.5rem 0.5rem;
   text-align: center;
+  /* background: #f8f6ea; */
 }
 
-article {
-  grid-column: 1;
-  grid-row: 2;
-  background: #dfffff;
-  padding: 0.5rem 0.5rem;
-}
-
-aside {
-  grid-column: 2;
-  grid-row: 2;
-  background: rgb(255, 245, 255);
-  padding: 0.5rem 0.5rem;
-}
-
-/* heading and text styles */
 h1, h2 {
   font-family: 'Cambria', 'Georgia', serif;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: normal;
   line-height: normal;
 }
-
 h2 {
   font-size: 1.5rem;
   padding-top: 0;
@@ -84,27 +65,22 @@ p {
   line-height: 1.4rem;
 }
 
-/* links */
 a {
-  color: #237b93;
+  color: #0c2068;
   text-decoration: underline;
 }
-
 a:hover {
   color: #d332cb;
   text-decoration: none;
 }
 
-/* definition list styles for sidebar */
 dl {
   padding: 0;
 }
-
 dd {
   font-size: .9rem;
   line-height: 1.4rem;
 }
-
 dt {
   font-size: .95rem;
   font-weight: bold;
@@ -112,16 +88,13 @@ dt {
   line-height: 1.5rem;
 }
 
-/* media queries */
 @media (max-width: 1000px) {
-  #wrapper {
+  #grid {
     margin: 0;
   }
 }
-
 @media (max-width: 760px) {
-  #wrapper {
-    /* remove grid for small mobile screens */
+  #grid {    /* remove grid for small mobile screens */
     display: block;
     width: 100%;
     margin: 0;
@@ -140,36 +113,27 @@ dt {
   left: 0;
   pointer-events: none;
   opacity: 0;
-  transition: opacity 200ms;
+  transition: opacity 500ms;
 }
-
 #target-content:target {
   pointer-events: all;
   opacity: 1;
 }
-
 #target-content #target-inner {
   position: absolute;
   display: block;
-  padding: 48px;
+  padding: 32px;
   line-height: 1.8;
   width: 70%;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2);
-  background: white;
+  background: rgb(252, 252, 252);
   color: #34495E;
 }
-
 #target-content #target-inner h2 {
   margin-top: 0;
 }
-
-#target-content #target-inner code {
-  font-weight: bold;
-}
-
 #target-content a.close {
   content: "";
   position: absolute;
@@ -177,11 +141,10 @@ dt {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #34495E;
+  background-color: #b2b5b8;
   opacity: 0.5;
-  transition: opacity 200ms;
+  transition: opacity 500ms;
 }
-
 #target-content a.close:hover {
   opacity: 0.4;
 }
