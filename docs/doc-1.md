@@ -1,9 +1,10 @@
-#### Onboarding
+# Onboarding
 
+## Doc 1
 This is internal documentation for Application Onboarding.
 Steps to onboard to the platform:
 
-testing
+### testing
 
 ...
 dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
