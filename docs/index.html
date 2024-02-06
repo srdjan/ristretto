@@ -24,8 +24,8 @@
       <div class="grid-border">
         <dl>
           <dt>Home</dt>
-          <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            <a href="javascript:replace('article','home')">Show</a>
+          <dd data-id="1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            <a data-id="1" href="javascript:replace('article','home')">Show</a>
             <div class="hidden" id="home">
               <h2>The Organization</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -42,12 +42,11 @@
                 nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit 
                 anim id est laborum
               </p>
-
             </div>
           </dd>
           <dt class="index">Page 1</dt>
-          <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            <a href="javascript:replace('article','page1')">Show</a>
+          <dd data-id="2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            <a data-id="2" href="javascript:replace('article','page1')">Show</a>
             <div class="hidden" id="page1">
               <h2>Page 1</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -59,8 +58,8 @@
             </div>
           </dd>
           <dt class="index">Page 2</dt>
-          <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            <a href="javascript:replace('article','page2')">Show</a>
+          <dd data-id="3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            <a data-id="3" href="javascript:replace('article','page2')">Show</a>
             <div class="hidden" id="page2">
               <h2>Page 2</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -72,8 +71,8 @@
             </div>
           </dd>
           <dt class="index">Page 3</dt>
-          <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            <a href="javascript:replace('article','page3')">Show</a>
+          <dd data-id="4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            <a data-id="4" href="javascript:replace('article','page3')">Show</a>
             <div class="hidden" id="page3">
               <h2>Page 3</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -86,8 +85,8 @@
             </div>
           </dd>
           <dt class="index">Page 4</dt>
-          <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            <a href="javascript:replace('article','page4')">Show</a>
+          <dd data-id="5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            <a data-id="5" href="javascript:replace('article','page4')">Show</a>
             <div class="hidden" id="page4">
               <h2>Page 4</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -111,10 +110,24 @@
   </div>
 
   <script type="text/javascript">
+    const as = document.querySelectorAll('a');
+    const dds = document.querySelectorAll('dd');
+    as.forEach(button => button.addEventListener('click', highlight, false));
+    function highlight(e) {
+      dds.forEach(item => item.classList.remove('dd-border'));
+      const a = e.target;
+      const id = a.dataset.id;
+      const dd = document.querySelector(`dd[data-id="${id}"]`);
+      dd.classList.add('dd-border');
+    }
+
+    // initialize
     function replace(id, contentId) {
       document.getElementById(id).innerHTML = document.getElementById(contentId).innerHTML;
     }
-    replace('article','home')
+    replace('article','home');
+    const dd_home = document.querySelector(`dd[data-id="1"]`);
+    dd_home.classList.add('dd-border');
   </script>    
 </body>
 
