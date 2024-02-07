@@ -67,7 +67,7 @@ a {
   color: #121316;
   text-decoration: underline;
   text-decoration-color: #dedfdf;
-  text-decoration-thickness: 3px;
+  text-decoration-thickness: 2px;
 }
 a:focus, a:hover {
   text-decoration-color:#a4a4b7;
@@ -83,12 +83,12 @@ dd {
   margin-inline-start: 10px;
   padding-left: 5px;
   border-left: solid;
-  border-left-width: 2px;
+  border-left-width: 1px;
   border-left-color: #fff; 
 }
 .dd-border {
   border-left: solid;
-  border-left-width: 2px;
+  border-left-width: 1px;
   border-left-color: #bcc1c1; 
 }
 dt {
