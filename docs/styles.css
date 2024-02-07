@@ -66,10 +66,12 @@ p {
 a {
   color: #121316;
   text-decoration: underline;
+  text-decoration-color: #dedfdf;
+  text-decoration-thickness: 3px;
 }
 a:focus, a:hover {
-  text-decoration: none;
-  background-color: #dedfdf;
+  text-decoration-color:#a4a4b7;
+  cursor: pointer;
 }
 
 dl {
@@ -81,12 +83,12 @@ dd {
   margin-inline-start: 10px;
   padding-left: 5px;
   border-left: solid;
-  border-left-width: 3px;
+  border-left-width: 2px;
   border-left-color: #fff; 
 }
 .dd-border {
   border-left: solid;
-  border-left-width: 3px;
+  border-left-width: 2px;
   border-left-color: #bcc1c1; 
 }
 dt {
