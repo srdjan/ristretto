@@ -6,3 +6,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
   mollit anim id est laborum
 
+```mermaid
+flowchart TB
+    c1-->a2
+    subgraph Stage-1
+    a1-->a2
+    end
+    subgraph Stage-2
+    b1-->b2
+    end
+    subgraph Stage 3
+    c1-->c2
+    end
+```
