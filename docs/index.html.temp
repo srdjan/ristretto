@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Docs">
+  <title>Documentation for {xyz}</title>
+  <script defer src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>    
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/missing.css/dist/normalize.min.css">
+</head>
+<body>
+  <div id="grid">
+    <header>
+      <h1>Company xzy</h1>
+      <p>sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+    </header>
+    <aside>
+      <div class="grid-border">
+        <dl>
+        <a><dt class="menu" data-id="1">Overview</dt></a>
+          <dd data-id="1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Ut enim ad minim veniam, quis nostrud exercitation
+            <div class="hidden" id="page1">
+              <zero-md id="app" src="doc-1.md" no-shadow manual-render></zero-md>
+            </div>
+          </dd>
+        <a><dt class="menu" data-id="2">Installation</dt></a>
+          <dd data-id="2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            <div class="hidden" id="page2">
+              <zero-md src="doc-2.md" no-shadow manual-render></zero-md>
+            </div>
+          </dd>
+          <a><dt class="menu" data-id="3">Guide</dt></a>
+          <dd data-id="3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Ut enim ad minim veniam, quis nostrud exercitation
+            <div class="hidden" id="page3">
+              <zero-md src="doc-3.md" no-shadow manual-render></zero-md>
+            </div>
+          </dd>
+          <a><dt class="menu" data-id="4">Contribute</dt></a>
+          <dd data-id="4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            <div class="hidden" id="page4">
+              <zero-md src="doc-4.md" no-shadow manual-render></zero-md>
+            </div>
+          </dd>
+        <a><dt class="menu" data-id="5">Examples</dt></a>
+          <dd data-id="5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            <div class="hidden" id="page5">
+              <zero-md src="doc-5.md" no-shadow manual-render></zero-md>
+            </div>
+          </dd>
+        </dl>
+      </div>
+    </aside>
+
+    <article id="article">
+    </article>
+
+    <footer>
+      <p>footer info | some more info</p>
+    </footer>
+  </div>
+
+  <script type="text/javascript">
+    const dts = document.querySelectorAll('dt');
+    const dds = document.querySelectorAll('dd');
+    dts.forEach(dt => dt.addEventListener('click', highlight, false));
+    function highlight(e) {
+      dds.forEach(item => item.classList.remove('dd-border'));
+      const id = e.target.dataset.id;
+      const dd = document.querySelector(`dd[data-id="${id}"]`);
+      dd.classList.add('dd-border');
+      document.getElementById('article').innerHTML = document.getElementById(`page${id}`).innerHTML;
+    }
+    //initialize
+    highlight({target: {dataset: {id: 1}}})
+
+    //md rendering
+      app.addEventListener('zero-md-ready', async () => {
+        const renderer = new marked.Renderer()
+        renderer.code = function (code, lang) {
+          return lang === 'mermaid'
+            ? `<div class="mermaid">${code}</div>`
+            : `<pre><code>${code}</code></pre>`
+        }
+        await app.render({ renderer })
+        mermaid.init()
+      })
+
+    // const mds = document.querySelectorAll("#app")
+    // console.log(mds)
+
+    // mds[0].addEventListener('zero-md-ready', async () => {
+    //   // Create custom marked renderer
+    //   const renderer = new marked.Renderer()
+    //   renderer.code = function (code, lang) {
+    //     return lang === 'mermaid'
+    //       ? `<div class="mermaid">${code}</div>`
+    //       : `<pre><code>${code}</code></pre>`
+    //   }
+    //   await mds[0].render({ renderer })
+    //   mermaid.init()
+    // })
+  </script>
+</body>
+</html>
