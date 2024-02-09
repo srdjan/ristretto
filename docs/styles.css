@@ -45,6 +45,7 @@ footer {
   grid-row: 3;
   padding: 0.5rem 0.5rem;
   text-align: center;
+  font-size: 12px;
 }
 
 h1, h2 {

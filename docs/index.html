@@ -10,25 +10,25 @@
     <div id="grid">
       <header>
         <h1>Company xzy</h1>
-        <p>sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        <p>Beautiful documentation static web site</p>
       </header>
       <aside>
         <div class="grid-border">
           <dl>
             <a><dt data-id="1" data-src="overview.md">Overview</dt></a>
-            <dd class="dd-border" data-id="1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</dd>
+            <dd class="dd-border" data-id="1">This is a short overview</dd>
 
             <a><dt data-id="2" data-src="installation.md">Installation</dt></a>
-            <dd data-id="2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</dd>
+            <dd data-id="2">Instructions on how to install</dd>
 
             <a><dt data-id="3" data-src="guide.md">Guide</dt></a>
-            <dd data-id="3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</dd>
+            <dd data-id="3">User guide step by step</dd>
 
             <a><dt data-id="4" data-src="contribute.md">Contribute</dt></a>
-            <dd data-id="4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</dd>
+            <dd data-id="4">How to contribute</dd>
 
             <a><dt data-id="5" data-src="examples.md">Examples</dt></a>
-            <dd data-id="5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</dd>
+            <dd data-id="5">Few examples</dd>
           </dl> 
         </div>
       </aside>
@@ -37,12 +37,10 @@
         <zero-md id="app" src="overview.md" no-shadow manual-render></zero-md>
       </article>
   
-      <footer>
-        <p>footer info | some more info</p>
-      </footer>
+      <footer>footer info | some more info</footer>
 
     <script>
-      //setup zero-md
+      //-- setup zero-md with mermaid
       app.addEventListener('zero-md-ready', async () => {
         const renderer = new marked.Renderer()
         renderer.code = function (code, lang) {
@@ -54,18 +52,18 @@
         mermaid.init()
       })
 
-      // setup left side menu & select main content
+      //-- setup left side menu & select main content
       const dts = document.querySelectorAll('dt');
-      dts.forEach(dt => dt.addEventListener('click', highlight, false));
-      
+      dts.forEach(dt => dt.addEventListener('click', highlight, false)); 
       const dds = document.querySelectorAll('dd');
       function highlight(e) {
+        // add border to selection
         dds.forEach(item => item.classList.remove('dd-border'));
-        
         let id = e.target.dataset.id;
         let dd = document.querySelector(`dd[data-id="${id}"]`);
         dd.classList.add('dd-border');
 
+        // change main content
         let zeromd = document.getElementById("app")
         zeromd.setAttribute("src", `${e.target.dataset.src}`)
         zeromd.render()
