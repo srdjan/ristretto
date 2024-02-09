@@ -127,7 +127,7 @@ dt {
   display:block;
   border:1px black solid;
 }
-#un{
+#one{
   width:40px;
   height:40px;
   animation-name: anim1;
@@ -135,7 +135,7 @@ dt {
   animation-timing-function: ease-in;
   animation-iteration-count: 1;
 }
-#deux{
+#two{
   width:30px;
   height:30px;
   animation-name: anim2;
@@ -144,7 +144,7 @@ dt {
   animation-timing-function: ease-in;
   animation-iteration-count: 1;  
 }
-#trois{
+#three{
   width:20px;
   height:20px;
   animation-name: anim3;

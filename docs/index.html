@@ -9,9 +9,9 @@
   <body>    
     <div id="grid">
       <header>
-        <div class="logo" id='un'></div>
-        <div class="logo" id='deux'></div>
-        <div class="logo" id='trois'></div>
+        <div class="logo" id='one'></div>
+        <div class="logo" id='two'></div>
+        <div class="logo" id='three'></div>
         <h1>Company xzy</h1>
         <p>Beautiful documentation static web site</p>
       </header>
@@ -69,7 +69,8 @@
         // change main content
         let zeromd = document.getElementById("app")
         zeromd.setAttribute("src", `${e.target.dataset.src}`)
-        zeromd.render()
+        let article = document.getElementById("article")
+        article.replaceWith(article)
       }
     </script>
   </body>
