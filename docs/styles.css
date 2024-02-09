@@ -120,50 +120,6 @@ dt {
   }
 }
 
-#target-content {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 500ms;
-}
-#target-content:target {
-  pointer-events: all;
-  opacity: 1;
-}
-#target-content #target-inner {
-  position: absolute;
-  display: block;
-  padding: 32px;
-  line-height: 1.8;
-  width: 70%;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  background: rgb(252, 252, 252);
-  color: #34495E;
-}
-#target-content #target-inner h2 {
-  margin-top: 0;
-}
-#target-content a.close {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #b2b5b8;
-  opacity: 0.5;
-  transition: opacity 500ms;
-}
-#target-content a.close:hover {
-  opacity: 0.4;
-}
-
 .logo{
   position:absolute;
   top: 3.5rem;
