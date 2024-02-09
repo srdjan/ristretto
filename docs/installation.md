@@ -7,6 +7,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   mollit anim id est laborum
 
 ```mermaid
+flowchart TD;
+    A[Start] --> B[Process 1];
+    B --> C[Process 2];
+    C --> D[End];
+```
+
+
+```mermaid
 flowchart TB
     c1-->a2
     subgraph Stage-1

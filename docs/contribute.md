@@ -1,7 +1,7 @@
 # How To Contribute
 
 ```mermaid
-xychart-beta
+xychart
     title "Sales Revenue"
     x-axis [jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec]
     y-axis "Revenue (in $)" 4000 --> 11000

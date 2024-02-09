@@ -13,18 +13,4 @@ flowchart TD;
     C --> D[End];
 ```
 
-Current releases
----
-title: Example Git diagram
----
-gitGraph
-   commit
-   commit
-   branch develop
-   checkout develop
-   commit
-   commit
-   checkout main
-   merge develop
-   commit
-   commit
+
